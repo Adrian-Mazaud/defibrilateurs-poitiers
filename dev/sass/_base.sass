@@ -1,0 +1,48 @@
+*,*::after, *::before, html, body
+    box-sizing: border-box
+
+html
+    font-size: $rootSize
+
+
+html, body
+    margin: 0
+    padding: 0
+
+
+body
+    background: $greylighten
+    color: $grey
+    overflow: hidden
+a
+    text-decoration: none
+
+.cf::after
+    content: ''
+    display: table
+    clear: both
+
+.link-hide
+    display: none
+
+.wrap
+    +grid-row
+
+.app-overlay
+    display: block
+    background: #000
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+    background: radial-gradient(ellipse at center, #159165 0%,#127a3d 100%)
+
+    svg
+        position: absolute
+        width: 50px
+        height: 50px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)

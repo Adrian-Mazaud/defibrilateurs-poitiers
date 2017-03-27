@@ -1,0 +1,67 @@
+.panel-cross-button
+    display: block
+    width: 50px
+    height: 50px
+    // background: darken(#fafafa, 10%)
+    background: #fff
+    position: absolute
+    top: 7px
+    left: 100%
+    transform: translateX(-100%)
+    border-radius: 5px 0 0 5px
+    z-index: 0
+
+    transition: left .2s ease-in-out, transform .2s ease-in-out, background .2s ease-in-out
+    transition-delay: 0
+    pointer-events: all
+
+
+    .cross
+        position: absolute
+        top: 50%
+        left: 50%
+        display: block
+        width: 40%
+        height: 40%
+        transform: translate(-50%, -50%)
+        transform-origin: center center
+        transition: transform .2s ease-in-out
+
+    .cross::before, .cross::after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        // left: 50%
+        transform: translateY(-50%)
+        width: 100%
+        height: 2px
+        background: #2196F3
+        transform-origin: center center
+        transition: background .2s ease-in-out
+
+    .cross::after
+        transform: translateY(-50%) rotate(90deg)
+
+    &:hover, &:focus
+        background: #2196F3
+
+
+        .cross::before, .cross::after
+            background: #FFF
+
+
+    &.close
+        left: 0
+        transition: left .8s ease-in
+
+        .cross
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+        .cross::before, .cross::after
+            background: #F44336
+
+    &.close:hover, &.close:focus
+        background: #F44336
+        .cross::before, .cross::after
+            background: #FFF

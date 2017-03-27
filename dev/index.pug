@@ -1,0 +1,19 @@
+//- Layout de base
+extends includes_pug/layout
+//- Import des mixins
+include includes_pug/mixins
+
+//- Titre de la page
+block title
+    title Alpha -  Vue2 - Defibrilateurs poitiers
+
+//- Meta description
+block meta
+    meta(name='description', content='Exemple de description')
+
+block content
+    div(id="app")
+
+
+block scripts
+    script(src="app/app.min.js")
